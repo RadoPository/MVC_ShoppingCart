@@ -1,0 +1,24 @@
+﻿@model List<MVC_ShoppingCart.Models.ItemModel>
+
+@{
+    ViewBag.Title = "Display Items";
+}
+
+<h2>Items</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Quantity</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>
